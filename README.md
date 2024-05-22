@@ -2,13 +2,17 @@
 
 Run [C4Builder](https://adrianvlupu.github.io/C4-Builder/) in GitHub Actions to generate a documentation website from Markdown and PlantUML files.
 
+## Fix
+
+This action is using a [version of C4-Build](https://github.com/yciabaud/C4-Builder#7b1444c4a307e63d1f9dc1ee5453bdde5ebc5378) without Zlib.
+
 ## Usage
 
 Put the following step in your workflow:
 
 ```yml
       - name: C4Builder
-        uses: clippings/c4builder-action@v1
+        uses: spy7/c4builder-action@v1
 ```
 
 Workflow example:
@@ -31,7 +35,7 @@ jobs:
       - uses: actions/checkout@v1
 
       - name: C4Builder
-        uses: clippings/c4builder-action@v1
+        uses: spy7/c4builder-action@v1
 ```
 
 ## Configuration
@@ -50,7 +54,7 @@ jobs:
       - uses: actions/checkout@v1
 
       - name: C4Builder
-        uses: clippings/c4builder-action@v1
+        uses: spy7/c4builder-action@v1
         with:
           path: 'doc/architecture'
 ```
