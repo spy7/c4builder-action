@@ -20,7 +20,7 @@ ENV PUPPETEER_SKIP_DOWNLOAD true
 ENV PUPPETEER_EXECUTABLE_PATH /usr/bin
 
 # Install C4Builder
-RUN npm install --global github.com/yciabaud/C4-Builder#7b1444c4a307e63d1f9dc1ee5453bdde5ebc5378
+RUN npm install --global https://github.com/yciabaud/C4-Builder#7b1444c4a307e63d1f9dc1ee5453bdde5ebc5378
 
 # Copy your code file from your action repository to the filesystem path `/` of the container
 COPY entrypoint.sh /entrypoint.sh
